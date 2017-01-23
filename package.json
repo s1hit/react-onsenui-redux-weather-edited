@@ -7,7 +7,8 @@
     "start": "webpack-dev-server --host 0.0.0.0 --progress --content-base www/",
     "build": "npm run lint && cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "deploy": "npm run build && git commit www -m \"Deploy\" && git subtree push --prefix www origin gh-pages",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,7 @@
     "eslint-plugin-standard": "^2.0.0",
     "file-loader": "^0.9.0",
     "isomorphic-fetch": "^2.2.1",
+    "jest-cli": "^18.1.0",
     "json-loader": "^0.5.4",
     "ncp": "^2.0.0",
     "node-uuid": "^1.4.7",
@@ -54,6 +56,12 @@
     "stylus-loader": "^2.3.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
+    "webpack-babel-jest": "^1.0.4",
     "webpack-dev-server": "^1.16.2"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/webpack-babel-jest",
+    "testFileExtensions": ["es6", "js"],
+    "moduleFileExtensions": ["js", "json", "es6"]
   }
 }
