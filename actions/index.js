@@ -13,6 +13,8 @@ export const SET_FETCH_ERROR = 'SET_FETCH_ERROR';
 export const OPEN_DIALOG = 'OPEN_DIALOG';
 export const CLOSE_DIALOG = 'CLOSE_DIALOG';
 
+export const ADD_MEDICINE = 'ADD_MEDICINE';
+
 export const addLocation = (name) => ({
   type: ADD_LOCATION,
   id: generateId(),
@@ -66,6 +68,13 @@ export const addLocationAndFetchWeather = name => {
     dispatch(fetchWeather(id));
   };
 };
+
+export const addMedicine = medicine => ({
+  type: ADD_MEDICINE,
+  id: medicine.id,
+  name: medicine.name,
+  isVisible: medicine.isVisible
+});
 
 export const openDialog = () => ({
   type: OPEN_DIALOG

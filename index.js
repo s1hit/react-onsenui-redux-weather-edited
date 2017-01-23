@@ -25,7 +25,7 @@ const store = createStore(weatherApp,
     : applyMiddleware(thunk, logger)
 );
 
-import {addLocationAndFetchWeather} from './actions';
+import {addLocationAndFetchWeather, addMedicine} from './actions';
 
 [
   'Tokyo',
@@ -36,6 +36,14 @@ import {addLocationAndFetchWeather} from './actions';
   'Rio de Janeiro',
   'Istanbul'
 ].forEach((city) => store.dispatch(addLocationAndFetchWeather(city)));
+
+[
+  {id: 'ITEM_0', name: 'Potion'},
+  {id: 'ITEM_1', name: 'Hi-Potion'},
+  {id: 'ITEM_2', name: 'X-Potion'},
+  {id: 'ITEM_3', name: 'Ether'},
+  {id: 'ITEM_4', name: 'Elixir'}
+].forEach((medicine) => store.dispatch(addMedicine(medicine)));
 
 const rootElement = document.getElementById('root');
 
