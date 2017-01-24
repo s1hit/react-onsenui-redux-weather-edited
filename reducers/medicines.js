@@ -3,11 +3,9 @@ import {
 } from '../actions';
 
 const medicines = (state = {}, action) => {
-  const type = action.type;
-  delete action.type;
-
-  switch (type) {
+  switch (action.type) {
     case ADD_MEDICINE:
+      delete action.type;
       return {
         ...state,
         [action.id]: action
