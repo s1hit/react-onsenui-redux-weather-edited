@@ -1,10 +1,10 @@
 import React from 'react';
 import * as actions from '../../actions'
 
-describe('actions', () => {
+describe('medicine actions', () => {
   it('should create an action to add a medicine', () => {
     const sampleAction = {
-      id: 'TEST001',
+      id: 'ACTION_TEST001',
       name: 'sample medicine',
       isVisible: true
     };
