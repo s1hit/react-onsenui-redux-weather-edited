@@ -8,7 +8,7 @@ import NavBar from './NavBar';
 import LocationList from '../containers/LocationList';
 import AddLocation from '../containers/AddLocation';
 
-const Weather = ({title, navigator}) => (
+const Weather = ({navigator}) => (
   <Page renderToolbar={() => <NavBar title='Weather' navigator={navigator} />}>
     <LocationList navigator={navigator} />
     <AddLocation />

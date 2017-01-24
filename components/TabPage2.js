@@ -1,15 +1,22 @@
 import React from 'react';
 
 import {
-  Page
+  Page,
+  Navigator
 } from 'react-onsenui';
 
-import NavBar from './NavBar';
-import MedicineList from '../containers/MedicineList';
+import CustomPage from './CustomPage';
 
-const TabPage2 = ({title}) => (
-  <Page renderToolbar={() => <NavBar title={title} />}>
-    <MedicineList />
+const renderPage = (route, navigator) => (
+  <route.component key={route.key} navigator={navigator} />
+);
+
+const TabPage2 = () => (
+  <Page>
+    <Navigator
+      renderPage={renderPage}
+      initialRoute={{component: CustomPage, key: 'CUSTOM_PAGE'}}
+    />
   </Page>
 );
 
