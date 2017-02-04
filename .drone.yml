@@ -1,0 +1,11 @@
+build:
+  lint-and-test:
+    image: node:5
+    environment:
+      - NPM_CONFIG_CACHE=/drone/.npm
+    commands:
+      - npm i
+
+cache:
+  mount:
+    - /drone/.npm
