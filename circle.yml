@@ -10,5 +10,5 @@ dependencies:
     - yarn
 
 test:
-  overide:
+  override:
     - yarn run test
