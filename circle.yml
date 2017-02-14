@@ -1,0 +1,14 @@
+machine:
+  node:
+    version: 4.3.2
+  post:
+    - npm install -g yarn
+  timezone: Asia/Tokyo
+
+dependencies:
+  override:
+    - yarn
+
+test:
+  overide:
+    - yarn run test
