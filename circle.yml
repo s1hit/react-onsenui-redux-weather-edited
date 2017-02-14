@@ -13,6 +13,10 @@ test:
   override:
     - yarn run test
 
+compile:
+  override:
+    - yarn run build
+
 deployment:
   prod:
     branch: master
