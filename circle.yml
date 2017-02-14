@@ -1,0 +1,20 @@
+machine:
+  node:
+    version: 4.3.2
+  post:
+    - npm install -g yarn
+  timezone: Asia/Tokyo
+
+dependencies:
+  override:
+    - yarn
+
+test:
+  override:
+    - yarn run test
+
+deployment:
+  prod:
+    branch: master
+    commands:
+      - aws s3 sync www s3://jp.co.opt.safe-di/ --delete
