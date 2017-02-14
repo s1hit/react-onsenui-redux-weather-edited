@@ -21,4 +21,4 @@ deployment:
   prod:
     branch: master
     commands:
-      - aws s3 sync . s3://jp.co.opt.safe-di/ --delete
+      - aws s3 sync www/ s3://jp.co.opt.safe-di --delete
