@@ -1,3 +1,5 @@
+edited
+
 # React Redux Weather
 
 ![React Redux Weather](https://raw.githubusercontent.com/argelius/react-onsenui-redux-weather/master/react_redux_weather.png)
